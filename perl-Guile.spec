@@ -4,8 +4,8 @@
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Guile
-Summary:	Guile perl module - a Perl binding to Guile interpreter
-Summary(pl):	Modu³ perla Guile - dowi±zanie Perla do interpretera Guile
+Summary:	Guile Perl module - a Perl binding to Guile interpreter
+Summary(pl):	Modu³ Perla Guile - dowi±zanie Perla do interpretera Guile
 Name:		perl-Guile
 Version:	0.002
 Release:	1
