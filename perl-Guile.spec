@@ -33,7 +33,7 @@ interpterem jêzyka programowania Scheme.
 %patch1 -p1
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %{!?_without_tests:%{__make} test}
