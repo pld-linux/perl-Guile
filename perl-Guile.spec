@@ -11,7 +11,7 @@ Version:	0.001
 Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
 Patch0:		%{name}-includes.patch
 Patch1:		%{name}-warning.patch
 BuildRequires:	guile-devel >= 1.5.0
