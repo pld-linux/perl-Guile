@@ -8,13 +8,14 @@ Summary:	Guile Perl module - a Perl binding to Guile interpreter
 Summary(pl):	Modu³ Perla Guile - dowi±zanie Perla do interpretera Guile
 Name:		perl-Guile
 Version:	0.002
-Release:	1
+Release:	2
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
 # Source0-md5:	2bbb0979d1ab4c208e9614fb35496b0f
 Patch0:		%{name}-includes.patch
 Patch1:		%{name}-warning.patch
+Patch2:		%{name}-types.patch
 BuildRequires:	guile-devel >= 1.5.0
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -32,6 +33,7 @@ interpterem jêzyka programowania Scheme.
 %setup -q -n %{pdir}-%{version}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__perl} Makefile.PL \
