@@ -27,7 +27,7 @@ interpreter for the Scheme programming language.
 
 %description -l pl
 Ten modu³ udostêpnia interfejs do systemu GNU Guile. Guile jest
-interpterem jêzyka programowania Scheme.
+interpreterem jêzyka programowania Scheme.
 
 %prep
 %setup -q -n %{pdir}-%{version}
