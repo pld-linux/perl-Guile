@@ -3,7 +3,7 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Guile
+%define		pdir	Guile
 Summary:	Guile Perl module - a Perl binding to Guile interpreter
 Summary(pl):	Modu³ Perla Guile - dowi±zanie Perla do interpretera Guile
 Name:		perl-Guile
