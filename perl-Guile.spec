@@ -8,7 +8,7 @@ Summary:	Guile perl module - a Perl binding to Guile interpreter
 Summary(pl):	Modu³ perla Guile - dowi±zanie Perla do interpretera Guile
 Name:		perl-Guile
 Version:	0.001
-Release:	2
+Release:	3
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
@@ -16,7 +16,7 @@ Patch0:		%{name}-includes.patch
 Patch1:		%{name}-warning.patch
 BuildRequires:	guile-devel >= 1.5.0
 BuildRequires:	perl-devel >= 5.6.1-66
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -33,7 +33,8 @@ interpterem jêzyka programowania Scheme.
 %patch1 -p1
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %{!?_without_tests:%{__make} test}
@@ -50,10 +51,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitearch}/Guile.pm
-%{perl_sitearch}/Guile
-%dir %{perl_sitearch}/auto/Guile
-%dir %{perl_sitearch}/auto/Guile/*
-%{perl_sitearch}/auto/Guile/*/*.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Guile/*/*.so
+%{perl_vendorarch}/Guile.pm
+%{perl_vendorarch}/Guile
+%dir %{perl_vendorarch}/auto/Guile
+%dir %{perl_vendorarch}/auto/Guile/*
+%{perl_vendorarch}/auto/Guile/*/*.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Guile/*/*.so
 %{_mandir}/man3/*
