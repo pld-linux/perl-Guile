@@ -1,0 +1,11 @@
+--- Guile-0.002/guile_wrap.c.orig	2004-05-31 22:48:01.000000000 +0200
++++ Guile-0.002/guile_wrap.c	2004-05-31 22:49:30.290896166 +0200
+@@ -9,7 +9,7 @@
+ SCM newSCMsv (SV *sv, char *type) {
+   SCM scm = SCM_PACK(0);
+   AV *av;
+-  int len;
++  STRLEN len;
+   char *val;
+ 
+   // derive type from SV
