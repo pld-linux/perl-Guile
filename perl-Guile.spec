@@ -16,7 +16,7 @@ Patch0:		%{name}-includes.patch
 Patch1:		%{name}-warning.patch
 BuildRequires:	guile-devel >= 1.5.0
 BuildRequires:	perl-devel >= 5.6.1-66
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.0.2-104
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
