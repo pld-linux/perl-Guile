@@ -1,0 +1,11 @@
+--- Guile-0.001/guile_wrap.c.orig	Sat Jul 21 21:23:30 2001
++++ Guile-0.001/guile_wrap.c	Wed Dec 25 00:13:20 2002
+@@ -7,7 +7,7 @@
+ 
+ // transaltes an SV into a new SCM
+ SCM newSCMsv (SV *sv, char *type) {
+-  SCM scm;
++  SCM scm = SCM_PACK(0);
+   AV *av;
+   int len;
+   char *val;

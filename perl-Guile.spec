@@ -1,3 +1,7 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Guile
 Summary:	Guile perl module - a Perl binding to Guile interpreter
@@ -8,8 +12,10 @@ Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
+Patch0:		%{name}-includes.patch
+Patch1:		%{name}-warning.patch
 BuildRequires:	guile-devel >= 1.5.0
-BuildRequires:	perl >= 5.6.1
+BuildRequires:	perl-devel >= 5.6.1-66
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -23,10 +29,14 @@ interpterem jêzyka programowania Scheme.
 
 %prep
 %setup -q -n %{pdir}-%{version}
+%patch0 -p1
+%patch1 -p1
 
 %build
 perl Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
+
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
