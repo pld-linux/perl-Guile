@@ -40,6 +40,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
+%{perl_sitearch}/Guile.pm
 %{perl_sitearch}/Guile
 %dir %{perl_sitearch}/auto/Guile
 %dir %{perl_sitearch}/auto/Guile/*
