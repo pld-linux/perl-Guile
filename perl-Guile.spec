@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Guile
 Summary:	Guile Perl module - a Perl binding to Guile interpreter
-Summary(pl):	Modu³ Perla Guile - dowi±zanie Perla do interpretera Guile
+Summary(pl.UTF-8):   ModuÅ‚ Perla Guile - dowiÄ…zanie Perla do interpretera Guile
 Name:		perl-Guile
 Version:	0.002
 Release:	2
@@ -25,9 +25,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This module provides an interface to the GNU Guile system. Guile is an
 interpreter for the Scheme programming language.
 
-%description -l pl
-Ten modu³ udostêpnia interfejs do systemu GNU Guile. Guile jest
-interpreterem jêzyka programowania Scheme.
+%description -l pl.UTF-8
+Ten moduÅ‚ udostÄ™pnia interfejs do systemu GNU Guile. Guile jest
+interpreterem jÄ™zyka programowania Scheme.
 
 %prep
 %setup -q -n %{pdir}-%{version}
