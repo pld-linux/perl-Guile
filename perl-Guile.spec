@@ -11,11 +11,12 @@ Version:	0.002
 Release:	2
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Guile/%{pdir}-%{version}.tar.gz
 # Source0-md5:	2bbb0979d1ab4c208e9614fb35496b0f
 Patch0:		%{name}-includes.patch
 Patch1:		%{name}-warning.patch
 Patch2:		%{name}-types.patch
+URL:		http://search.cpan.org/dist/Guile/
 BuildRequires:	guile-devel >= 1.5.0
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
